@@ -1,0 +1,11 @@
+# Netlify のヘッダー設定（このファイルをサイトの一番上の階層に置くと有効になる）
+# ・他サイトへの埋め込み禁止（なりすましページに埋め込んで操作させる手口を防ぐ）
+# ・ファイル種別の偽装防止
+# ・他サイトへはドメイン名だけ渡す
+# ・カメラ/マイク/位置情報/決済/USB は使わないので禁止
+/*
+  X-Frame-Options: DENY
+  Content-Security-Policy: frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
